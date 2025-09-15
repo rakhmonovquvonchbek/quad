@@ -7,22 +7,30 @@ import { fileURLToPath } from "url";
 const app = express();
 const PORT = 3000;
 
-// Handle file paths correctly
+// Get correct file paths
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Load recipes from seed.json (go up one level from src/)
+// Load recipes from seed.json (one level up from src/)
 const dataPath = path.join(__dirname, "../data/seed.json");
-const recipes = JSON.parse(fs.readFileSync(dataPath, "utf-8"));
 
-// Route: all recipes
+let recipes = [];
+try {
+  const rawData = fs.readFileSync(dataPath, "utf-8");
+  recipes = JSON.parse(rawData);
+  console.log(`✅ Loaded ${recipes.length} recipes from seed.json`);
+} catch (err) {
+  console.error("❌ Failed to load recipes:", err);
+  process.exit(1);
+}
+
+// Route: get all recipes
 app.get("/recipes", (req, res) => {
   console.log("📥 GET /recipes called");
-  console.log("recipes length:", recipes.length);
   res.json(recipes);
 });
 
-// Route: single recipe by id
+// Route: get a single recipe by id
 app.get("/recipes/:id", (req, res) => {
   const recipe = recipes.find(r => r.id === req.params.id);
   if (!recipe) {
@@ -31,6 +39,7 @@ app.get("/recipes/:id", (req, res) => {
   res.json(recipe);
 });
 
+// Start server
 app.listen(PORT, () => {
   console.log(`🚀 API running at http://localhost:${PORT}`);
 });
