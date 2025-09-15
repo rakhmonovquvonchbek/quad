@@ -17,6 +17,8 @@ const recipes = JSON.parse(fs.readFileSync(dataPath, "utf-8"));
 
 // Route: all recipes
 app.get("/recipes", (req, res) => {
+  console.log("📥 GET /recipes called");
+  console.log("recipes length:", recipes.length);
   res.json(recipes);
 });
 
