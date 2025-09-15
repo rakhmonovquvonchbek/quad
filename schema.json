@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Recipe",
+  "description": "Schema for storing famous and frequently searched European and Indian dishes for critique AI.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the dish (UUID or slug)."
+    },
+    "name": {
+      "type": "string",
+      "description": "Name of the dish (e.g., 'Butter Chicken', 'Spaghetti Carbonara')."
+    },
+    "origin": {
+      "type": "string",
+      "enum": ["European", "Indian"],
+      "description": "Main cuisine origin."
+    },
+    "popularityRank": {
+      "type": "integer",
+      "description": "Rank based on search frequency or user demand (1 = most popular)."
+    },
+    "ingredients": {
+      "type": "array",
+      "description": "Key ingredients of the dish.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "instructions": {
+      "type": "array",
+      "description": "Step-by-step preparation instructions.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "cookTimeMinutes": {
+      "type": "integer",
+      "description": "Approximate cooking time in minutes."
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": ["Easy", "Medium", "Hard"],
+      "description": "Difficulty level of the recipe."
+    },
+    "reviews": {
+      "type": "array",
+      "description": "User or AI-generated critiques.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "reviewer": {
+            "type": "string",
+            "description": "Name or source of review (user/AI)."
+          },
+          "rating": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 5,
+            "description": "Rating out of 5."
+          },
+          "comment": {
+            "type": "string",
+            "description": "Short critique or feedback."
+          }
+        },
+        "required": ["reviewer", "rating", "comment"]
+      }
+    }
+  },
+  "required": ["id", "name", "origin", "ingredients", "instructions"]
+}
