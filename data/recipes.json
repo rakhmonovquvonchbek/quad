@@ -1,0 +1,153 @@
+[
+  {
+    "id": "butter-chicken",
+    "name": "Butter Chicken",
+    "origin": "Indian",
+    "popularityRank": 1,
+    "ingredients": [
+      "Chicken",
+      "Butter",
+      "Tomatoes",
+      "Cream",
+      "Garam Masala",
+      "Garlic",
+      "Ginger"
+    ],
+    "instructions": [
+      "Marinate chicken with yogurt and spices.",
+      "Cook chicken until lightly browned.",
+      "Prepare a sauce with tomatoes, cream, butter, and spices.",
+      "Simmer chicken in sauce until tender.",
+      "Serve with naan or rice."
+    ],
+    "cookTimeMinutes": 60,
+    "difficulty": "Medium",
+    "reviews": [
+      {
+        "reviewer": "AI Critique",
+        "rating": 4.7,
+        "comment": "Rich flavor but can be heavy on cream; balance with spice."
+      }
+    ]
+  },
+  {
+    "id": "biryani",
+    "name": "Chicken Biryani",
+    "origin": "Indian",
+    "popularityRank": 2,
+    "ingredients": [
+      "Basmati Rice",
+      "Chicken",
+      "Onions",
+      "Tomatoes",
+      "Yogurt",
+      "Spices",
+      "Saffron"
+    ],
+    "instructions": [
+      "Marinate chicken with yogurt and spices.",
+      "Cook rice with whole spices until half-done.",
+      "Layer chicken and rice in a pot.",
+      "Steam until rice and chicken are fully cooked.",
+      "Serve with raita."
+    ],
+    "cookTimeMinutes": 90,
+    "difficulty": "Hard",
+    "reviews": [
+      {
+        "reviewer": "AI Critique",
+        "rating": 4.9,
+        "comment": "Complex but rewarding; flavors deepen with slow cooking."
+      }
+    ]
+  },
+  {
+    "id": "spaghetti-carbonara",
+    "name": "Spaghetti Carbonara",
+    "origin": "European",
+    "popularityRank": 3,
+    "ingredients": [
+      "Spaghetti",
+      "Eggs",
+      "Pecorino Romano",
+      "Pancetta",
+      "Black Pepper"
+    ],
+    "instructions": [
+      "Cook spaghetti until al dente.",
+      "Fry pancetta until crispy.",
+      "Mix eggs and cheese in a bowl.",
+      "Combine pasta, pancetta, and egg-cheese mixture off heat.",
+      "Season with black pepper and serve."
+    ],
+    "cookTimeMinutes": 30,
+    "difficulty": "Easy",
+    "reviews": [
+      {
+        "reviewer": "AI Critique",
+        "rating": 4.6,
+        "comment": "Simple yet delicious; timing is key to avoid scrambled eggs."
+      }
+    ]
+  },
+  {
+    "id": "pizza-margherita",
+    "name": "Pizza Margherita",
+    "origin": "European",
+    "popularityRank": 4,
+    "ingredients": [
+      "Pizza Dough",
+      "Tomato Sauce",
+      "Mozzarella",
+      "Fresh Basil",
+      "Olive Oil"
+    ],
+    "instructions": [
+      "Preheat oven to high heat.",
+      "Stretch dough into a round base.",
+      "Spread tomato sauce evenly.",
+      "Top with mozzarella and fresh basil.",
+      "Bake until crust is golden and cheese is melted."
+    ],
+    "cookTimeMinutes": 20,
+    "difficulty": "Easy",
+    "reviews": [
+      {
+        "reviewer": "AI Critique",
+        "rating": 4.8,
+        "comment": "Perfect balance of flavors; dough quality makes the difference."
+      }
+    ]
+  },
+  {
+    "id": "paella",
+    "name": "Seafood Paella",
+    "origin": "European",
+    "popularityRank": 5,
+    "ingredients": [
+      "Rice",
+      "Shrimp",
+      "Mussels",
+      "Saffron",
+      "Peppers",
+      "Onions",
+      "Garlic"
+    ],
+    "instructions": [
+      "Sauté onions, peppers, and garlic in olive oil.",
+      "Add rice and saffron, cook briefly.",
+      "Add broth and simmer.",
+      "Arrange seafood on top and cook until done.",
+      "Serve directly from the pan."
+    ],
+    "cookTimeMinutes": 60,
+    "difficulty": "Medium",
+    "reviews": [
+      {
+        "reviewer": "AI Critique",
+        "rating": 4.7,
+        "comment": "Festive and colorful; tricky to get rice texture perfect."
+      }
+    ]
+  }
+]
