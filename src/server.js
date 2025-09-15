@@ -12,7 +12,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Load recipes from seed.json
-const dataPath = path.join(__dirname, "../data/seed.json");
+const dataPath = path.join(__dirname, "../../data/seed.json");
 const recipes = JSON.parse(fs.readFileSync(dataPath, "utf-8"));
 
 // Route: all recipes
