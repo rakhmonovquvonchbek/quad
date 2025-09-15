@@ -7,12 +7,12 @@ import { fileURLToPath } from "url";
 const app = express();
 const PORT = 3000;
 
-// Fix relative path handling
+// Handle file paths correctly
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Load recipes from seed.json
-const dataPath = path.join(__dirname, "../../data/seed.json");
+// Load recipes from seed.json (go up one level from src/)
+const dataPath = path.join(__dirname, "../data/seed.json");
 const recipes = JSON.parse(fs.readFileSync(dataPath, "utf-8"));
 
 // Route: all recipes
@@ -32,4 +32,3 @@ app.get("/recipes/:id", (req, res) => {
 app.listen(PORT, () => {
   console.log(`🚀 API running at http://localhost:${PORT}`);
 });
-
